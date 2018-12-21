@@ -4,7 +4,7 @@ import ReactDOM from 'react-dom'
 class App extends React.Component {
   render () {
     return (
-      <h1>Buildlight</h1>
+      <h1>Buildlight App</h1>
     )
   }
 }
