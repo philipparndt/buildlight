@@ -31,15 +31,15 @@
 }
 
 .build.ok:before {
-   content: url('../../../../assets/ok.svg');
+   content: url('../../../assets/ok.svg');
 }
 
 .build.warning:before {
-   content: url('../../../../assets/warning.svg');
+   content: url('../../../assets/warning.svg');
 }
 
 .build.error:before {
-   content: url('../../../../assets/error.svg');
+   content: url('../../../assets/error.svg');
 }
 
 .build:before {
