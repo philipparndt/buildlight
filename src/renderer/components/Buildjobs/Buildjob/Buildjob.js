@@ -5,7 +5,7 @@ export default (props) => {
     return (
         <div className={`build ${props.result}`}>
             <p className="build-title">{props.name}</p>
-            <p>{props.description}</p>
+            <p>{props.detail}</p>
         </div>
     )
 };

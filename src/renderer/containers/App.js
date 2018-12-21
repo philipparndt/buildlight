@@ -1,14 +1,19 @@
 import React, { Component } from 'react';
-import Buildjob from '../components/Buildjobs/Buildjob/Buildjob'
+import Buildjobs from '../components/Buildjobs/Buildjobs'
 import './App.css';
 
 class App extends Component {
+    
+    state = {
+        buildjobs: [
+            {id: 0, name: "some build job", detail: "2 tests failed", result: "warning"},
+            {id: 1, name: "another build job", result: "ok"},
+            {id: 2, name: "a failing job", detail: "some error message", result: "error"},
+        ]
+    }
+    
     render() {
-        return <>
-            <Buildjob name = "some build job" description="2 tests failed" result="warning"/>
-            <Buildjob name = "another build job" result="ok"/>
-            <Buildjob name = "a failing job" result="error"/>
-        </>
+        return <><Buildjobs jobs={this.state.buildjobs}/></>
     }
 }
 
