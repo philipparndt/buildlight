@@ -1,3 +1,26 @@
-.Test {
-    border: 5px solid black;
+body, input {
+    font-family: "Roboto", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+body, input {
+    color: rgba(255,255,255,.87);
+    -webkit-font-feature-settings: "kern","onum","liga";
+    font-feature-settings: "kern","onum","liga";
+    font-family: Helvetica Neue,Helvetica,Arial,sans-serif;
+    font-weight: 400;
+}
+body {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+
+     background: #151D1F;
+}
+
+html {
+    -webkit-text-size-adjust: none;
+    -ms-text-size-adjust: none;
+    text-size-adjust: none;
+}
+
+html {
+    font-size: 70%;
 }

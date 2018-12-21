@@ -1,6 +1,11 @@
 import React from 'react'
 import './Buildjob.css';
 
-export default (props) => (
-    <div className="Job">Buildjob: {props.name}</div>
-);
+export default (props) => {
+    return (
+        <div className={`build ${props.result}`}>
+            <p className="build-title">{props.name}</p>
+            <p>{props.description}</p>
+        </div>
+    )
+};
