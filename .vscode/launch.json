@@ -1,0 +1,18 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "protocol": "inspector",
+            "outputCapture": "std",
+            "type": "node",
+            "request": "launch",
+            "name": "Launch Program",
+            "program": "${workspaceFolder}/main.js",
+            "cwd": "${workspaceRoot}",
+            "runtimeExecutable": "${workspaceRoot}/node_modules/.bin/electron",
+            "windows": {
+              "runtimeExecutable": "${workspaceRoot}/node_modules/.bin/electron.cmd"
+            }
+        }
+    ]
+}

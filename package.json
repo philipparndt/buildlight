@@ -1,0 +1,30 @@
+{
+  "name": "buildlight",
+  "version": "0.0.1",
+  "description": "Jenkins build notification",
+  "main": "main.js",
+  "scripts": {
+    "dev": "webpack --watch",
+    "start": "electron ."
+  },
+  "repository": "https://github.com/philipparndt/buildlight",
+  "keywords": [
+    "Jenkins",
+    "Tray",
+    "Notification"
+  ],
+  "author": "philipparndt",
+  "license": "Apache-2.0",
+  "devDependencies": {
+    "babel-core": "^6.26.3",
+    "babel-loader": "^6.4.1",
+    "babel-preset-es2015": "^6.24.1",
+    "babel-preset-react": "^6.24.1",
+    "electron": "^4.0.0",
+    "webpack": "^1.13.3"
+  },
+  "dependencies": {
+    "react": "^16.7.0",
+    "react-dom": "^16.7.0"
+  }
+}
