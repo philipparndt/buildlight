@@ -2,10 +2,11 @@
   "name": "buildlight",
   "version": "0.0.1",
   "description": "Jenkins build notification",
-  "main": "./src/main.js",
   "scripts": {
-    "dev": "webpack --watch",
-    "start": "electron ."
+    "dev": "electron-webpack dev",
+    "compile": "electron-webpack",
+    "dist": "yarn compile && electron-builder",
+    "dist:dir": "yarn dist --dir -c.compression=store -c.mac.identity=null"
   },
   "repository": "https://github.com/philipparndt/buildlight",
   "keywords": [
@@ -15,17 +16,20 @@
   ],
   "author": "philipparndt",
   "license": "Apache-2.0",
-  "devDependencies": {
-    "babel-core": "^6.26.3",
-    "babel-loader": "^6.4.1",
-    "babel-preset-es2015": "^6.24.1",
-    "babel-preset-react": "^6.24.1",
-    "css-loader": "^2.0.1",
-    "electron": "^4.0.0",
-    "webpack": "^1.13.3"
-  },
   "dependencies": {
     "react": "^16.7.0",
-    "react-dom": "^16.7.0"
+    "react-dom": "^16.7.0",
+    "source-map-support": "^0.5.9",
+    "@babel/preset-react": "^7.0.0",
+    "electron": "4.0.0",
+    "electron-builder": "^20.28.1",
+    "electron-webpack": "^2.1.2",
+    "electron-webpack-eslint": "^3.0.0",
+    "less": "^3.8.1",
+    "less-loader": "^4.1.0",
+    "webpack": "^4.16.5"
+  },
+  "resolutions": {
+    "upath": "^1.0.5"
   }
 }
