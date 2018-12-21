@@ -2,7 +2,7 @@
   "name": "buildlight",
   "version": "0.0.1",
   "description": "Jenkins build notification",
-  "main": "main.js",
+  "main": "./src/main.js",
   "scripts": {
     "dev": "webpack --watch",
     "start": "electron ."

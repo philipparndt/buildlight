@@ -1,7 +1,7 @@
 module.exports = {
-  entry: './renderer.js',
+  entry: './src/react/index.js',
   output: {
-    filename: './renderer-bundle.js'
+    filename: './src/react/index-bundle.js'
   },
   module: {
     loaders: [
