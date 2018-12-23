@@ -1,11 +1,8 @@
-body, input {
-    font-family: "Roboto", "Helvetica Neue", Helvetica, Arial, sans-serif;
-}
-body, input {
+/*body, input {
     color: rgba(255,255,255,.87);
     -webkit-font-feature-settings: "kern","onum","liga";
     font-feature-settings: "kern","onum","liga";
-    font-family: Helvetica Neue,Helvetica,Arial,sans-serif;
+    font-family: San Francisco, Helvetica Neue, Helvetica, Arial, sans-serif;
     font-weight: 400;
 }
 body {
@@ -19,8 +16,4 @@ html {
     -webkit-text-size-adjust: none;
     -ms-text-size-adjust: none;
     text-size-adjust: none;
-}
-
-html {
-    font-size: 70%;
-}
+}*/
