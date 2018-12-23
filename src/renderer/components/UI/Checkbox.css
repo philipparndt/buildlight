@@ -55,7 +55,7 @@
   
   /* Style the checkmark/indicator */
   .checkbox-container .checkbox-checkmark:after {
-    left: 7px;
+    left: 6px;
     top: 3px;
     width: 8px;
     height: 12px;
