@@ -11,11 +11,11 @@ class Configuration extends Component {
         else {
             return (
             <div className="ConfigPage">
-                    <article class="message">
-                        <div class="message-header">
+                    <article className="message">
+                        <div className="message-header">
                             <p>Polling rate</p>
                         </div>
-                        <div class="message-body">
+                        <div className="message-body">
                             <label>The polling rate in seconds</label>
                             <input type="text" value="300"/>
                         </div>

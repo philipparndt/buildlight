@@ -5,11 +5,11 @@ import './ServerConfiguration.css';
 
 export default (props) => {
     return (
-        <article class="message">
-            <div class="message-header">
+        <article className="message">
+            <div className="message-header">
                 <p>http://jenkins.some.server</p>
             </div>
-            <div class="message-body">
+            <div className="message-body">
                 <JobConfiguration/>
                 <JobConfiguration/>
                 <JobConfiguration/>

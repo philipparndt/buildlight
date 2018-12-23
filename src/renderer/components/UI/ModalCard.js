@@ -1,11 +1,10 @@
 import React from 'react'
-import './Checkbox.css';
 
 export default (props) => {
-    const modalclassName = "modal" + (props.visible ? " is-active" : "");
+    const visibility = "modal" + (props.visible ? " is-active" : "");
 
     return (
-        <div className={modalclassName}>
+        <div className={visibility}>
             <div className="modal-background"/>
             <div className="modal-card">
                 <header className="modal-card-head">
