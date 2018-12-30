@@ -1,8 +1,7 @@
 import React, { Component } from 'react';
 import ConfigurationPage from '../components/Configuration/ConfigurationPage';
 import Buildjobs from '../components/Buildjobs/Buildjobs';
-import Navigation, {Pages} from './Navigation'
-import {BrowserRouter} from 'react-router-dom'
+import Navigation from './Navigation'
 import {Route} from 'react-router-dom'
 
 import './App.css';
@@ -49,15 +48,13 @@ class App extends Component {
     }
 
     render() {
-        return <BrowserRouter>
-            <>
-                <Navigation />
-                <div className="NavigationSpacer">
-                    <Route path="/" exact render={() => this.createMainPage()}/>
-                    <Route path="/settings" exact render={() => this.createSettingsPage()}/>
-                </div>
-            </>
-        </BrowserRouter>
+        return <>
+            <Navigation />
+            <div className="NavigationSpacer">
+                <Route path="/" exact render={() => this.createMainPage()}/>
+                <Route path="/settings" exact render={() => this.createSettingsPage()}/>
+            </div>
+        </>
     }
 }
 
