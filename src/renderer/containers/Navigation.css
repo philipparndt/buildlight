@@ -1,0 +1,12 @@
+.Navigation {
+    margin-bottom:  0;
+    width: 100%;
+    top: 0;
+    position: fixed;
+    z-index: 1000;
+    background: rgb(240,240,240);
+}
+
+.NavigationSpacer {
+    margin-top: 50px;
+}

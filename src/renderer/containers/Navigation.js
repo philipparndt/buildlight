@@ -1,5 +1,6 @@
 import React from 'react'
 import {Link, withRouter} from 'react-router-dom'
+import './Navigation.css'
 
 export const Pages = Object.freeze({
     'Main': '/', 
@@ -23,7 +24,7 @@ function transformPage(currentPage, page) {
 }
 
 const navigation = (props) => {
-    return <div className="tabs">
+    return <div className="tabs Navigation">
         <ul>
             {createTabs(props.location.pathname)}
         </ul>

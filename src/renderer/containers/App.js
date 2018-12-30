@@ -38,7 +38,7 @@ class App extends Component {
     }
 
     createMainPage = () => {
-        return <div className="column">
+        return <div className="column" style={{paddingTop: '0px'}}>
             <Buildjobs jobs={this.state.buildjobs}/>
             <button onClick={this.allJobsGreenHandler}>Mark all jobs as green</button>
         </div>
@@ -52,8 +52,10 @@ class App extends Component {
         return <BrowserRouter>
             <>
                 <Navigation />
-                <Route path="/" exact render={() => this.createMainPage()}/>
-                <Route path="/settings" exact render={() => this.createSettingsPage()}/>
+                <div className="NavigationSpacer">
+                    <Route path="/" exact render={() => this.createMainPage()}/>
+                    <Route path="/settings" exact render={() => this.createSettingsPage()}/>
+                </div>
             </>
         </BrowserRouter>
     }
