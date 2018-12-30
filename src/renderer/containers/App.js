@@ -1,18 +1,16 @@
 import React, { Component } from 'react';
 import ConfigurationPage from '../components/Configuration/ConfigurationPage';
 import Buildjobs from '../components/Buildjobs/Buildjobs';
-import Navigation, {Pages, registerPage} from './Navigation'
+import Navigation, {Pages} from './Navigation'
+import {BrowserRouter} from 'react-router-dom'
+import {Route} from 'react-router-dom'
 
 import './App.css';
-import '../../../node_modules/bulma/css/bulma.css';
 
 class App extends Component {
 
     constructor(props) {
         super(props)
-        
-        registerPage(Pages["Main"], this.createMainPage)
-        registerPage(Pages["Settings"], this.createSettingsPage)
     }
 
     state = {
@@ -24,8 +22,7 @@ class App extends Component {
             {id: 4, name: "a failing job", detail: "some error message", result: "error"},
             {id: 5, name: "a failing job", detail: "some error message", result: "error"},
             {id: 6, name: "a failing job", detail: "some error message", result: "error"},
-        ],
-        currentPage: Pages['Main']
+        ]
     }
     
     allJobsGreenHandler = () => {
@@ -40,10 +37,6 @@ class App extends Component {
         this.setState({buildjobs});
     }
 
-    setPageHandler = (page) => {
-        this.setState({currentPage: page});
-    }
-
     createMainPage = () => {
         return <div className="column">
             <Buildjobs jobs={this.state.buildjobs}/>
@@ -56,9 +49,13 @@ class App extends Component {
     }
 
     render() {
-        return <Navigation 
-            currentPage={this.state.currentPage} 
-            pageChangedHandler={this.setPageHandler}/>
+        return <BrowserRouter>
+            <>
+                <Navigation />
+                <Route path="/" exact render={() => this.createMainPage()}/>
+                <Route path="/settings" exact render={() => this.createSettingsPage()}/>
+            </>
+        </BrowserRouter>
     }
 }
 

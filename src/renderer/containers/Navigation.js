@@ -1,43 +1,33 @@
 import React from 'react'
+import {Link, withRouter} from 'react-router-dom'
 
-export const Pages = Object.freeze({"Main": 1, "Settings": 2});
-const PageFactories = {};
+export const Pages = Object.freeze({
+    'Main': '/', 
+    'Settings': '/settings'});
 
-function createTabs(currentPage, pageChangedHandler) {
-    const pages = Object.keys(Pages)
-    .map(page => {
-        const id = Pages[page];
+function createTabs(currentPage) {
+    return Object.keys(Pages)
+    .map(page => transformPage(currentPage, page));
+}
 
-        var pageState = "";
-        if (currentPage === id) {
-            pageState = "is-active";
-        }
+function transformPage(currentPage, page) {
+    const id = Pages[page];
 
-        return <li className={pageState}>
-                <a onClick={() => pageChangedHandler(id)}>
-                    {page}
-                </a>
-            </li>;
-    });
+    var pageState = "inactive";
+    if (currentPage === id) {
+        pageState = "is-active";
+    }
+    return <li key={id} className={pageState}>
+            <Link to={id}>{page}</Link>
+        </li>
+}
 
+const navigation = (props) => {
     return <div className="tabs">
         <ul>
-            {pages}
+            {createTabs(props.location.pathname)}
         </ul>
     </div>
 }
 
-export function registerPage(page, pageFactory) {
-    PageFactories[page] = pageFactory;
-}
-
-function createPage(page) {
-    return PageFactories[page]();
-}
-
-export default (props) => {
-    return <>
-        {createTabs(props.currentPage, props.pageChangedHandler)}
-        {createPage(props.currentPage)}
-    </>;
-}
+export default withRouter(navigation);
