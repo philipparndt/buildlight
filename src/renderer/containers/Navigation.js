@@ -14,9 +14,9 @@ function createTabs(currentPage) {
 function transformPage(currentPage, page) {
     const id = Pages[page];
 
-    var pageState = "inactive";
+    var pageState = '';
     if (currentPage === id) {
-        pageState = "is-active";
+        pageState = 'is-active';
     }
     return <li key={id} className={pageState}>
             <Link to={id}>{page}</Link>
