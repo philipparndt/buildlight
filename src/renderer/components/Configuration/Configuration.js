@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import ServerConfiguration from './ServerConfiguration'
 import AddServer from './AddServer';
-import { Button } from 'react-bulma-components';
+import { Container, Box, Button, Field, Label, Control, Input, Help } from 'bloomer'
 
 import './Configuration.css';
 
@@ -21,6 +21,24 @@ class Configuration extends Component {
             }
         ]
     }
+/*
+    disableJob(jobName) {
+        const jobs = [...this.state.jobs];
+        const indexOf = jobs.indexOf(jobName);
+        if (indexOf > -1) {
+            jobs.splice(indexOf, 1);
+        }
+
+        this.setState({jobs: jobs}); 
+    }
+
+    enableJob(jobName) {
+        const jobs = [...this.state.jobs];
+        jobs.push(jobName);
+
+        this.setState({jobs: jobs}); 
+    }
+*/
 
     cancelAddServerHandler = () => {
         this.setState({addServer: false});
@@ -45,17 +63,21 @@ class Configuration extends Component {
             <div className="ConfigPage">
                     <AddServer visible={this.state.addServer} onCancel={this.cancelAddServerHandler}/>
 
-                    <article className="message">
-                        <div className="message-header">
-                            <p>Polling rate</p>
-                        </div>
-                        <div className="message-body">
-                            <label>The polling rate in seconds</label>
-                            <input type="text" value="300"/>
-                        </div>
-                    </article>
+                    <Container>
+                        <Box>
+                            <Field>
+                                <Label>Polling rate</Label>
+                                <Control>
+                                    <Input type="text" placeholder='Polling rate in seconds' value='300' />
+                                </Control>
+                                <Help isColor='info'>Polling rate in seconds</Help>
+                            </Field>
+                        </Box>
+                    </Container>
 
-                    <Button color="primary" onClick={this.openAddServerHandler}>Add server</Button>
+                    <br/>
+
+                    <Button isColor='primary' onClick={this.openAddServerHandler}>Add server</Button>
                     <br/><br/>
 
                     {servers}

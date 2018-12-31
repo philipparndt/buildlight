@@ -1,5 +1,7 @@
 import React, { Component } from 'react'
-import JobConfiguration from './JobConfiguration'
+import Checkbox from '../UI/Checkbox';
+
+import { Container, Box } from 'bloomer'
 
 import './ServerConfiguration.css';
 
@@ -31,18 +33,19 @@ class ServerConfiguration extends Component {
         const jobs = this.state.jobs.map(job => {
             const selected = this.props.jobs.includes(job);
 
-            return <JobConfiguration key={job} name={job} selected={selected}/>
+            return <Checkbox label={job} checked={selected} onChange={() => console.log(`toggle ${job}`)}/>;
         })
 
         return (
-            <article className="message">
-                <div className="message-header">
-                    <p>{this.props.url}</p>
-                </div>
-                <div className="message-body">
+            <>
+            <Container>
+                <Box isColor='primary'>
+                    <strong>{this.props.url}</strong>
                     {jobs}
-                </div>
-            </article>
+                </Box>
+            </Container>
+            <br/>
+            </>
         )
     }
 }

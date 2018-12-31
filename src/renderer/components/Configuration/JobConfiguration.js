@@ -9,6 +9,8 @@ export default (props) => {
     var currentId = id++;
 
     return (
-        <Checkbox label={props.name} checked={props.selected}/>
+        <>
+            <Checkbox label={props.name} checked={props.selected} onChange={() => console.log('on change')}/>
+        </>
     )
 };
