@@ -1,12 +1,25 @@
 import React, { Component } from 'react';
 import ServerConfiguration from './ServerConfiguration'
 import AddServer from './AddServer';
+import { Button } from 'react-bulma-components';
 
 import './Configuration.css';
 
 class Configuration extends Component {
     state = {
-        addServer: false
+        addServer: false,
+        servers: [
+            {
+                url: 'http://jenkins.example.com',
+                jobs: [
+                    'joba', 'jobb'
+                ]
+            },
+            {
+                url: 'http://jenkins.some.server',
+                jobs: []
+            }
+        ]
     }
 
     cancelAddServerHandler = () => {
@@ -17,11 +30,17 @@ class Configuration extends Component {
         this.setState({addServer: true});
     }
 
+    convertServerConfigToJSX(serverConfig) {
+        return <ServerConfiguration key={serverConfig.url} url={serverConfig.url} jobs={serverConfig.jobs}/>
+    }
+
     render() {
         if (!this.props.visible) {
             return null;
         }
         else {
+            const servers = this.state.servers.map(this.convertServerConfigToJSX);
+
             return (
             <div className="ConfigPage">
                     <AddServer visible={this.state.addServer} onCancel={this.cancelAddServerHandler}/>
@@ -36,15 +55,10 @@ class Configuration extends Component {
                         </div>
                     </article>
 
-                    <button className="button is-success" onClick={this.openAddServerHandler}>Add server</button>
+                    <Button color="primary" onClick={this.openAddServerHandler}>Add server</Button>
                     <br/><br/>
 
-                    <ServerConfiguration/>
-                    <ServerConfiguration/>
-                    <ServerConfiguration/>
-                    <ServerConfiguration/>
-                    <ServerConfiguration/>
-                    <ServerConfiguration/>
+                    {servers}
             </div>
             );
         }

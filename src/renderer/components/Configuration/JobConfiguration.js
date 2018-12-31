@@ -9,6 +9,6 @@ export default (props) => {
     var currentId = id++;
 
     return (
-        <Checkbox label={"some job config" + currentId} checked={currentId % 3==0}/>
+        <Checkbox label={props.name} checked={props.selected}/>
     )
 };

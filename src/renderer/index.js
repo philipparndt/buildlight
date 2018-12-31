@@ -4,7 +4,8 @@ import App from './containers/App'
 
 import {BrowserRouter} from 'react-router-dom'
 
-import '../../node_modules/bulma/css/bulma.css';
+import 'react-bulma-components/dist/react-bulma-components.min.css';
+import 'bulma/css/bulma.min.css';
 import './Index.css'
 import * as serviceWorker from './serviceWorker';
 

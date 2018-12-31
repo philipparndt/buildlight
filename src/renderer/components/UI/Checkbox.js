@@ -8,7 +8,7 @@ export default (props) => {
     }
 
     return (
-        <label className="checkbox-container">{props.label}
+        <label className="checkbox-container" onClick={() => console.log("clicked")}>{props.label}
             <input type="checkbox" {...opts}/>
             <span className="checkbox-checkmark"/>
         </label>

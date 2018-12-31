@@ -2,7 +2,8 @@ import React, { Component } from 'react';
 import ConfigurationPage from '../components/Configuration/ConfigurationPage';
 import Buildjobs from '../components/Buildjobs/Buildjobs';
 import Navigation from './Navigation'
-import {Route} from 'react-router-dom'
+import { Route } from 'react-router-dom'
+import { Button } from 'react-bulma-components';
 
 import './App.css';
 
@@ -39,7 +40,7 @@ class App extends Component {
     createMainPage = () => {
         return <div className="column" style={{paddingTop: '0px'}}>
             <Buildjobs jobs={this.state.buildjobs}/>
-            <button onClick={this.allJobsGreenHandler}>Mark all jobs as green</button>
+            <Button color="primary" onClick={this.allJobsGreenHandler}>Mark all jobs as green</Button>
         </div>
     }
     
