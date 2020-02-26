@@ -19,20 +19,20 @@
   "dependencies": {
     "@babel/preset-react": "^7.0.0",
     "bloomer": "^0.6.5",
-    "bulma": "^0.7.2",
-    "bulma-extensions": "^4.0.0",
+    "bulma": "^0.8.0",
+    "bulma-extensions": "^6.2.4",
     "electron": "4.0.0",
-    "electron-builder": "^20.28.1",
+    "electron-builder": "^22.3.5",
     "electron-webpack": "^2.7.4",
     "electron-webpack-eslint": "^3.0.0",
     "less": "^3.8.1",
     "less-loader": "^4.1.0",
-    "react": "^16.7.0",
-    "react-dom": "^16.7.0",
-    "react-router": "^4.3.1",
-    "react-router-dom": "^4.3.1",
+    "react": "^16.12.0",
+    "react-dom": "^16.12.0",
+    "react-router": "^5.1.2",
+    "react-router-dom": "^5.1.2",
     "source-map-support": "^0.5.9",
-    "webpack": "^4.16.5"
+    "webpack": "^4.41.6"
   },
   "resolutions": {
     "upath": "^1.0.5"
