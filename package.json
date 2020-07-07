@@ -21,7 +21,7 @@
     "bloomer": "^0.6.5",
     "bulma": "^0.8.0",
     "bulma-extensions": "^6.2.4",
-    "electron": "4.0.0",
+    "electron": "7.2.4",
     "electron-builder": "^22.3.5",
     "electron-webpack": "^2.7.4",
     "electron-webpack-eslint": "^3.0.0",
