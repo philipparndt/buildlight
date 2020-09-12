@@ -23,7 +23,7 @@
     "bulma-extensions": "6.2.7",
     "electron": "7.2.4",
     "electron-builder": "22.3.5",
-    "electron-webpack": "2.7.4",
+    "electron-webpack": "2.8.2",
     "electron-webpack-eslint": "3.0.0",
     "less": "3.9.0",
     "less-loader": "4.1.0",
