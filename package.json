@@ -19,7 +19,7 @@
   "dependencies": {
     "@babel/preset-react": "7.10.4",
     "bloomer": "0.6.5",
-    "bulma": "0.8.0",
+    "bulma": "0.9.0",
     "bulma-extensions": "6.2.7",
     "electron": "7.2.4",
     "electron-builder": "22.3.5",
