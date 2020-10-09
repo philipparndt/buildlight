@@ -35,7 +35,7 @@
     "webpack": "4.44.2"
   },
   "resolutions": {
-    "upath": "^1.0.5"
+    "upath": "^2.0.0"
   },
   "devDependencies": {
     "@babel/plugin-proposal-class-properties": "7.10.4"
